@@ -3,12 +3,13 @@ title: "Long footnote, code"
 author: "Bryan Shalloway"
 date: "6/7/2019"
 output: 
-  html_document:
-  github_document:
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
 ```
 
 # Ch. 20
@@ -32,13 +33,26 @@ getS3method("as.Date", "default")
 * `class` get or set class attribute
 * `unclass` returns copy with 'class' attribute removed
 
-[^tidyfuns]: For example:  
+[^tidyfuns]:
+    For example:
     ```{r}
     select
     methods("select")
     getS3method("select", "data.frame")
     dplyr:::select_impl
-    ```  
+    ```
     * These details may not illuminate for you how `select()` works  
     * Note that R has multiple systems for object oriented programming -- these topics are covered in [Advanced R Progamming](https://adv-r.hadley.nz/)  
+    
+
+
+<!-- [^tidyfuns]: For example:   -->
+<!--     ```{r} -->
+<!--     select -->
+<!--     methods("select") -->
+<!--     getS3method("select", "data.frame") -->
+<!--     dplyr:::select_impl -->
+<!--     ```   -->
+<!--     * These details may not illuminate for you how `select()` works   -->
+<!--     * Note that R has multiple systems for object oriented programming -- these topics are covered in [Advanced R Progamming](https://adv-r.hadley.nz/)   -->
     
